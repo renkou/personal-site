@@ -99,3 +99,33 @@ img {
 /**
  * YOUR CODE HERE
  */
+
+/*#nav-container {
+    width: 100%;
+}*/
+
+#nav {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    flex: 1 1 33.3%;
+    background-color: lightblue;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
