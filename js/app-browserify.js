@@ -4,7 +4,15 @@ require("es5-shim")
 // es6 polyfills, powered by babel
 require("babel/polyfill")
 
+global.jQuery = require('jquery');
+
+
 var Promise = require('es6-promise').Promise
+var $ = require('jquery');
+var _ = require('underscore');
+var Backbone = require('backbone');
+
+require("bootstrap")
 // just Node?
 // var fetch = require('node-fetch')
 // Browserify?
@@ -23,3 +31,7 @@ var Promise = require('es6-promise').Promise
     // new Router()
 // }
 
+//////------------models---------------//////
+//////------------collection-------------//////
+//////------------views-----------------//////
+//////------------router----------------//////
