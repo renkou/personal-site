@@ -2,15 +2,82 @@
 <html>
 
 <head>
-    <title></title>
+    <title>Steven Lor's Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./dist/style.css">
 </head>
 
 <body>
-	<div id=main-container>
-		
+	<div class="container">
+		<div id="main-div"></div>
 	</div>
 </body>
 
+<script id="base-template" type="text/template">
+	<nav id="top-nav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="navbar-brand landing-button hidden-sm hidden-md hidden-lg" href="#home">Steven Lor's Portfolio</div>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
+                <ul id="nav-ul-items" class="nav navbar-nav row">
+                	<li class="nav-li top-skills-nav col-sm-3 top-nav-divider">
+                        <a class="top-nav-item nav-skills skills-btn" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-li top-about-nav col-sm-3 top-nav-divider">
+                        <a class="top-nav-item nav-about about-btn" href="#about">About</a>
+                    </li>
+                    <li class="nav-li top-works-nav col-sm-3 top-nav-divider">
+                        <a class="top-nav-item nav-works works-btn" href="#works">Works</a>
+                    </li>
+                    <li class="nav-li top-contact-nav col-sm-3">
+                        <a class="top-nav-item nav-contact contact-btn" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="content-container" class="container">
+    </div>
+</script>
+
+<!-- templates -->
+<!-- skills template -->
+<script id="skills-container-template" type="text/template">
+	<div id="skills-wrapper" class="row"></div>
+</script>
+<script id="all-skills-template" type="text/template">
+	<div id="skill-one" class="top-spacing skill-section col-sm-4">
+    	<div id="skill-one-img">img here</div>
+    	<div id="skill-one-desc">html,css,javascript</div>
+    </div>
+    <div id="skill-two" class="top-spacing skill-section col-sm-4">
+    	<div id="skill-two-img">img here</div>
+    	<div id="skill-two-desc">responsive/bootstrap</div>
+    </div>
+    <div id="skill-three" class="top-spacing skill-section col-sm-4">
+    	<div id="skill-three-img">img here</div>
+    	<div id="skill-three-desc">backbone.js/jquery</div>
+    </div>
+</script>
+
+<!-- about template -->
+<script id="about-container-template" type="text/template">
+	<div id="about-wrapper" class="row"></div>
+</script>
+<script id="about-template" type="text/template">
+	<div id="about-me" class="top-spacing col-xs-12">
+		<div id="self-pic">insert circle pic of me here</div>
+		<hr width="75%" />
+		<p id="about-me-text">Insert desc here</p>
+	</div>
+</script>
+<script type="text/javascript" src="./dist/app-browserify.js"></script>
 </html>

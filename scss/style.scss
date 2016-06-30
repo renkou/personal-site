@@ -1,6 +1,8 @@
 
 @import "../bower_components/normalize-css/normalize.css";
 @import "../bower_components/typeplate-starter-kit/css/typeplate.css";
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import "../node_modules/bootstrap/dist/css/bootstrap-theme.min.css";
 
 /**
  * BOX-SIZING
@@ -100,32 +102,81 @@ img {
  * YOUR CODE HERE
  */
 
-/*#nav-container {
+/*-----------------------navigation----------------------*/
+#nav-ul-items {
     width: 100%;
-}*/
-
-#nav {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
 }
 
-.nav-item {
-    flex: 1 1 33.3%;
-    background-color: lightblue;
+.icon-bar{
+    background-color: white!important;
+}
+
+.nav-li{
     text-align: center;
 }
 
+@media (min-width: 768px){
+    .top-nav-divider{
+        border-right: 2px solid white;
+    }
+}
 
+.navbar-default {
+  background-color: #ff1800;
+  border-color: #c0392b;
+  background-image: -webkit-linear-gradient(top, #ff1800 0%, #ff412d 100%);
+  background-image: -o-linear-gradient(top, #ff1800 0%, #ff412d 100%);
+  background-image: linear-gradient(to bottom, #ff1800 0%, #ff412d 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff1800', endColorstr='#ff412d', GradientType=0);
+}
+.navbar-default .navbar-brand {
+  color: #ffffff;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #ffbbbc;
+}
+.navbar-default .navbar-text {
+  color: #ffffff;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #ffffff;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #ffbbbc;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #ffbbbc;
+  background-color: #c0392b;
+}
 
+.navbar-default .navbar-link:hover {
+  color: #ffbbbc;
+}
+/*-----------------------navigation end--------------------*/
 
+/*------------------------content----------------------------*/
 
+.top-spacing{
+    top: 80px;
+}
 
+/*!!!!!!!!!!!!!!!!! skills !!!!!!!!!!!!!!!!!*/
+.skill-section{
+    text-align: center;
+}
 
+/*!!!!!!!!!!!!!!!!!!! about !!!!!!!!!!!!!!!!!*/
+#self-pic{
+    text-align: center;
+}
 
+p{
+    text-indent: 50px;
+}
 
-
-
-
-
+/*!!!!!!!!!!!!!!!!!!! works !!!!!!!!!!!!!!!!*/

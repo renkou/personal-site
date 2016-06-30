@@ -32,6 +32,96 @@ require("bootstrap")
 // }
 
 //////------------models---------------//////
+var PageModel = new Backbone.Model.extend({
+
+});
 //////------------collection-------------//////
+var PageCollection = new Backbone.Collection.extend({
+	model: PageModel
+});
 //////------------views-----------------//////
+var BaseView = Backbone.View.extend({
+    el: '#main-div',
+
+    initialize: function(){
+    	this.render();
+    },
+
+    render: function() {
+    	this.$el.html(this.baseTemplate({}));
+    },
+
+    baseTemplate: _.template($('#base-template').html())
+});
+
+//!!!!!!!!!!!!!!!!! skills view !!!!!!!!!!!!!!!!!!//
+var SkillsNestedView = Backbone.View.extend({
+    el: '#skills-wrapper', 
+
+    render: function() {
+        this.$el.html(this.allSkillsTemplate({}));
+    },
+
+    allSkillsTemplate: _.template($('#all-skills-template').html())
+});
+
+var AllSkillsView = Backbone.View.extend({
+    el: '#content-container', 
+
+    initialize: function() {
+    	this.$el.html(this.skillsContainerTemplate({}));
+
+        var skillsNestedView = new SkillsNestedView();
+        skillsNestedView.render();
+    },
+
+    skillsContainerTemplate: _.template($('#skills-container-template').html())
+});
+
+//!!!!!!!!!!!!!!!!! about view !!!!!!!!!!!!!!!!!!!!!!!!!!//
+var AboutNestedView = Backbone.View.extend({
+    el: '#about-wrapper', 
+
+    render: function() {
+        this.$el.html(this.aboutTemplate({}));
+    },
+
+    aboutTemplate: _.template($('#about-template').html())
+});
+
+var AboutView = Backbone.View.extend({
+    el: '#content-container', //<----correct
+
+    initialize: function() {
+    	this.$el.html(this.aboutContainerTemplate({}));
+
+        var aboutNestedView = new AboutNestedView();
+        aboutNestedView.render();
+    },
+
+    aboutContainerTemplate: _.template($('#about-container-template').html())
+});
+
 //////------------router----------------//////
+var SiteRouter = Backbone.Router.extend({
+    routes: {
+    	"about": "about",
+        "*default": "skills"
+    },
+
+    skills: function(){
+    	var baseView = new BaseView();
+    	var allSkillsView = new AllSkillsView();
+    },
+
+    about: function(){
+    	var baseView = new BaseView();
+    	var aboutView = new AboutView();
+    },
+
+    initialize: function(){
+        Backbone.history.start();
+    }
+});
+
+var siteRouter = new SiteRouter();
