@@ -90,7 +90,7 @@ var AboutNestedView = Backbone.View.extend({
 });
 
 var AboutView = Backbone.View.extend({
-    el: '#content-container', //<----correct
+    el: '#content-container',
 
     initialize: function() {
     	this.$el.html(this.aboutContainerTemplate({}));
@@ -102,9 +102,59 @@ var AboutView = Backbone.View.extend({
     aboutContainerTemplate: _.template($('#about-container-template').html())
 });
 
+//!!!!!!!!!!!!!!!!! works view !!!!!!!!!!!!!!!!!!!!!!!!!!//
+var WorksNestedView = Backbone.View.extend({
+    el: '#works-wrapper', 
+
+    render: function() {
+        this.$el.html(this.worksTemplate({}));
+    },
+
+    worksTemplate: _.template($('#works-template').html())
+});
+
+var WorksView = Backbone.View.extend({
+    el: '#content-container',
+
+    initialize: function() {
+    	this.$el.html(this.worksContainerTemplate({}));
+
+        var worksNestedView = new WorksNestedView();
+        worksNestedView.render();
+    },
+
+    worksContainerTemplate: _.template($('#works-container-template').html())
+});
+
+//!!!!!!!!!!!!!!!!! contact view !!!!!!!!!!!!!!!!!!!!!!!!!!//
+var ContactNestedView = Backbone.View.extend({
+    el: '#contact-wrapper', 
+
+    render: function() {
+        this.$el.html(this.contactTemplate({}));
+    },
+
+    contactTemplate: _.template($('#contact-template').html())
+});
+
+var ContactView = Backbone.View.extend({
+    el: '#content-container', //<----correct
+
+    initialize: function() {
+    	this.$el.html(this.contactContainerTemplate({}));
+
+        var contactNestedView = new ContactNestedView();
+        contactNestedView.render();
+    },
+
+    contactContainerTemplate: _.template($('#contact-container-template').html())
+});
+
 //////------------router----------------//////
 var SiteRouter = Backbone.Router.extend({
     routes: {
+    	"contact": "contact",
+    	"works": "works",
     	"about": "about",
         "*default": "skills"
     },
@@ -117,6 +167,16 @@ var SiteRouter = Backbone.Router.extend({
     about: function(){
     	var baseView = new BaseView();
     	var aboutView = new AboutView();
+    },
+
+    works: function(){
+    	var baseView = new BaseView();
+    	var worksView = new WorksView();
+    },
+
+    contact: function(){
+    	var baseView = new BaseView();
+    	var contactView = new ContactView();
     },
 
     initialize: function(){
