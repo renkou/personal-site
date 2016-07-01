@@ -101,6 +101,11 @@ img {
 /**
  * YOUR CODE HERE
  */
+html, body{
+    height: 100vh;
+    max-width: 100%;
+    overflow-x: hidden;
+}
 
 /*-----------------------navigation----------------------*/
 #nav-ul-items {
@@ -162,7 +167,7 @@ img {
 /*------------------------content----------------------------*/
 
 .top-spacing{
-    top: 80px;
+    top: 52px;
 }
 
 /*!!!!!!!!!!!!!!!!! skills !!!!!!!!!!!!!!!!!*/
@@ -170,6 +175,41 @@ img {
     text-align: center;
 }
 
+.skill-img{
+    margin-bottom: 15px;
+}
+
+#skill-two{
+    background-color: #f2f2f2;
+}
+
+@media (min-width: 768px){
+    #skill-two{
+        height: 100vh;
+    }
+
+    .top-spacing{
+        padding-top: 28px;
+    }
+}
+@media(max-width: 767px){
+    .container{
+        padding: 0px;
+    }
+
+    .navbar-header{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .top-spacing{
+        margin-top: 15px;
+    }
+
+    .skill-section{
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+}
 /*!!!!!!!!!!!!!!!!!!! about !!!!!!!!!!!!!!!!!*/
 #self-pic{
     text-align: center;
