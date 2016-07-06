@@ -164,7 +164,21 @@ html, body{
 }
 /*-----------------------navigation end--------------------*/
 
+/*-----------------------footer----------------------------*/
+#icon-footer{
+    background-color: #444;
+    margin-top: 52px;
+    z-index: 10000;
+    width: 100%;
+    height: 10vh;
+    text-align: center;
+    color: white;
+}
+
 /*------------------------content----------------------------*/
+#main-div{
+    height: 85vh;
+}
 
 .top-spacing{
     top: 52px;
@@ -181,11 +195,12 @@ html, body{
 
 #skill-two{
     background-color: #f2f2f2;
+    z-index: -1;
 }
 
 @media (min-width: 768px){
     #skill-two{
-        height: 100vh;
+        height: 90vh;
     }
 
     .top-spacing{
@@ -220,3 +235,15 @@ p{
 }
 
 /*!!!!!!!!!!!!!!!!!!! works !!!!!!!!!!!!!!!!*/
+#works-showcase{
+    text-align: center;
+}
+
+.work-desc{
+    margin-top: 1%;
+}
+
+#git-text{
+    margin-top: 5%;
+    margin-bottom: 1%;
+}
