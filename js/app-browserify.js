@@ -138,7 +138,7 @@ var ContactNestedView = Backbone.View.extend({
 });
 
 var ContactView = Backbone.View.extend({
-    el: '#content-container', //<----correct
+    el: '#content-container', 
 
     initialize: function() {
     	this.$el.html(this.contactContainerTemplate({}));

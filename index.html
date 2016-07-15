@@ -28,17 +28,14 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
                 <ul id="nav-ul-items" class="nav navbar-nav row">
-                	<li class="nav-li top-skills-nav col-sm-3 top-nav-divider">
+                	<li class="nav-li top-skills-nav col-sm-4 top-nav-divider">
                         <a class="top-nav-item nav-skills skills-btn" href="#skills">Skills</a>
                     </li>
-                    <li class="nav-li top-about-nav col-sm-3 top-nav-divider">
+                    <li class="nav-li top-about-nav col-sm-4 top-nav-divider">
                         <a class="top-nav-item nav-about about-btn" href="#about">About</a>
                     </li>
-                    <li class="nav-li top-works-nav col-sm-3 top-nav-divider">
+                    <li class="nav-li top-works-nav col-sm-4">
                         <a class="top-nav-item nav-works works-btn" href="#works">Works</a>
-                    </li>
-                    <li class="nav-li top-contact-nav col-sm-3">
-                        <a class="top-nav-item nav-contact contact-btn" href="#contact">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -56,15 +53,21 @@
 </script>
 <script id="all-skills-template" type="text/template">
 	<div id="skill-one" class="top-spacing skill-section col-sm-4">
-    	<div id="skill-one-img" class="skill-img">img here</div>
+    	<div id="skill-one-img" class="skill-img">
+    		<img src="./imgs/skill1.jpg" alt="HTML5, CSS3, Javascript" />
+    	</div>
     	<div id="skill-one-desc">HTML, CSS and Javascript are the standard three that all front-end developers need to know. However, I prioritize speed and functionality rather than flashy CSS tricks, unless requested, so I can guarantee you a minimalistic site that works and pleases the eyes.</div>
     </div>
     <div id="skill-two" class="top-spacing skill-section col-sm-4">
-    	<div id="skill-two-img" class="skill-img">img here</div>
+    	<div id="skill-two-img" class="skill-img">
+    		<img src="./imgs/skill2.jpg" alt="Responsive Bootstrap" />
+    	</div>
     	<div id="skill-two-desc">With Booststrap you be assured that the websites I develop will always be responsive and look fantastic on both mobile and desktop screens. Bootstrap also allows me to easily switch between mobile first or desktop first design without skipping a beat.</div>
     </div>
     <div id="skill-three" class="top-spacing skill-section col-sm-4">
-    	<div id="skill-three-img" class="skill-img">img here</div>
+    	<div id="skill-three-img" class="skill-img">
+    		<img src="./imgs/skill3.jpg" alt="jQuery and Backbone.js" />
+    	</div>
     	<div id="skill-three-desc">Backbone.js has quickly become one of the greatest assests I've learned. In utilizing this MVC (Model-View-Controller) framework along with jQuery, I've been able to create very fast SPA (Single Page Application) websites.</div>
     </div>
 </script>
@@ -74,10 +77,11 @@
 	<div id="about-wrapper" class="row"></div>
 </script>
 <script id="about-template" type="text/template">
-	<div id="about-me" class="top-spacing col-xs-12">
+	<div id="about-me" class="container top-spacing col-xs-12">
 		<div id="self-pic">insert circle pic of me here</div>
 		<hr width="75%" />
-		<p id="about-me-text">Hello there! My name is Steven Lor and I'm a front-end web developer but you already knew that from the title of this site. As you can see from this portfolio, I enjoy minimalism and and  quick response times which happens to go hand in hand with each other. My hobbies consists of solving puzzles, riddles and mysteries, being a handyman around the house and enjoying games because we can learn many things from games and video games and I try my best to incorporate my knowledge gained from the designs and UX into the works I create. Thank you for visiting my website and I guarantee you that there's more to come! </p>
+		<p id="about-me-text"">Hello there! My name is Steven Lor and I'm a front-end web developer but you already knew that from the title of this site. As you can see from this portfolio, I enjoy minimalism and and  quick response times which happens to go hand in hand with each other. I usually like to plan and draw my projects first with all the information I require in order to speed up my creation process and get feedback from others.</p>
+		<p id="hobbies">My hobbies consists of solving puzzles, riddles and mysteries, adoring animals and enjoying games because we can learn many things from games and video games and I try my best to incorporate my knowledge gained from the designs and UX into the works I create. Thank you for visiting my website and I guarantee you that there's more to come!</p>
 	</div>
 </script>
 
@@ -107,7 +111,13 @@
 </script>
 <script id="contact-template" type="text/template">
 	<div id="contact-showcase" class="top-spacing col-xs-12">
-		<div>create simple contact form here</div>
+		<form action="./submit.php" method="post">
+		    <div>Your name: <input type="text" name="name" /></div>
+		    <div>Your email: <input type="text" name="email" /></div>
+		    <div class="antispam">Leave this empty: <input type="text" name="url" /></div>
+		    <div><textarea name="message" rows="10" cols="50"></textarea></div>
+		    <div><input type="submit" value="Send" /></div>
+		</form>
 	</div>
 </script>
 <script type="text/javascript" src="./dist/app-browserify.js"></script>

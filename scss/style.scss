@@ -167,10 +167,11 @@ html, body{
 /*-----------------------footer----------------------------*/
 #icon-footer{
     background-color: #444;
-    margin-top: 52px;
-    z-index: 10000;
+    bottom: -52px;
+    position: absolute;
+    z-index: 10;
     width: 100%;
-    height: 10vh;
+    height: 52px;
     text-align: center;
     color: white;
 }
@@ -200,7 +201,7 @@ html, body{
 
 @media (min-width: 768px){
     #skill-two{
-        height: 90vh;
+        height: 100vh;
     }
 
     .top-spacing{
@@ -224,6 +225,10 @@ html, body{
         padding-right: 30px;
         padding-left: 30px;
     }
+
+    #skill-two-desc{
+        padding-bottom: 25px;
+    }
 }
 /*!!!!!!!!!!!!!!!!!!! about !!!!!!!!!!!!!!!!!*/
 #self-pic{
@@ -232,6 +237,16 @@ html, body{
 
 p{
     text-indent: 50px;
+}
+
+#hobbies{
+    margin-top: 15px;
+}
+
+#about-me{
+    padding-right: 30px;
+    padding-left: 30px;
+    text-align: center;
 }
 
 /*!!!!!!!!!!!!!!!!!!! works !!!!!!!!!!!!!!!!*/
@@ -246,4 +261,9 @@ p{
 #git-text{
     margin-top: 5%;
     margin-bottom: 1%;
+}
+
+/*!!!!!!!!!!!!!!!!!!!! contact !!!!!!!!!!!!!!*/
+.antispam{
+    display: none;
 }
