@@ -28,11 +28,11 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
                 <ul id="nav-ul-items" class="nav navbar-nav row">
+                	<li class="nav-li top-about-nav col-sm-4 top-nav-divider">
+                        <a class="top-nav-item nav-about about-btn" href="#about">About</a>
+                    </li>
                 	<li class="nav-li top-skills-nav col-sm-4 top-nav-divider">
                         <a class="top-nav-item nav-skills skills-btn" href="#skills">Skills</a>
-                    </li>
-                    <li class="nav-li top-about-nav col-sm-4 top-nav-divider">
-                        <a class="top-nav-item nav-about about-btn" href="#about">About</a>
                     </li>
                     <li class="nav-li top-works-nav col-sm-4">
                         <a class="top-nav-item nav-works works-btn" href="#works">Works</a>
@@ -47,6 +47,32 @@
 </script>
 
 <!-- templates -->
+<!-- about template -->
+<script id="about-container-template" type="text/template">
+	<div id="about-wrapper" class="row"></div>
+</script>
+<script id="about-template" type="text/template">
+	<div id="about-me" class="container top-spacing col-xs-12">
+		<div id="self-pic">insert circle pic of me here</div>
+		<hr width="75%" />
+		<ul id="about-ul">
+
+		<li id="about-me-text" class="about-desc">Hello there! My name is Steven Lor and I'm a front-end web developer but you already knew that from the title of this site. As you can see from this portfolio, I enjoy minimalism and and  quick response times which happens to go hand in hand with each other. I usually like to plan and draw my projects first with all the information I require in order to speed up my creation process and get feedback from others.</li>
+
+		<li id="tech" class="about-desc">Technology is amazing! More and more tech just keeps getting created and improved that there doesn't seem like there's an end in sight, which is a good thing! Thanks to technology, it has given me the opportuniy to create websites and show off to the world that I exist.</li>
+
+		<li id="current" class="about-desc">Currently I've created websites and dabbled in simple mobile apps but it's fun to learn new things, especially methods that make things easier to create.</li>
+
+		<li id="learn" class="about-desc">I would love to continue working in the technology industry because there's just so much more to learn and not enough time! I've spent my life around technology and as a first generation American in my family, I can say that it really has made life a lot easier to deal with and help my family.</li>
+
+		<li id="games" class="about-desc">One topic that I think recieves too much negative press are video games. Video games are such a great learning tool because there's so much work put into them to create the best experience for the players. I've been exposed to them for so long that I try my best to incorporate my knowledge gained from the designs and UX of various styles and genres into the works I create.</li>
+
+		</ul>
+			<hr width="50%" />
+		<div id="thanks" class="about-desc">Thank you for visiting my website and I guarantee you that there's more to come!</div>
+	</div>
+</script>
+
 <!-- skills template -->
 <script id="skills-container-template" type="text/template">
 	<div id="skills-wrapper" class="row"></div>
@@ -72,19 +98,6 @@
     </div>
 </script>
 
-<!-- about template -->
-<script id="about-container-template" type="text/template">
-	<div id="about-wrapper" class="row"></div>
-</script>
-<script id="about-template" type="text/template">
-	<div id="about-me" class="container top-spacing col-xs-12">
-		<div id="self-pic">insert circle pic of me here</div>
-		<hr width="75%" />
-		<p id="about-me-text"">Hello there! My name is Steven Lor and I'm a front-end web developer but you already knew that from the title of this site. As you can see from this portfolio, I enjoy minimalism and and  quick response times which happens to go hand in hand with each other. I usually like to plan and draw my projects first with all the information I require in order to speed up my creation process and get feedback from others.</p>
-		<p id="hobbies">My hobbies consists of solving puzzles, riddles and mysteries, adoring animals and enjoying games because we can learn many things from games and video games and I try my best to incorporate my knowledge gained from the designs and UX into the works I create. Thank you for visiting my website and I guarantee you that there's more to come!</p>
-	</div>
-</script>
-
 <!-- works template -->
 <script id="works-container-template" type="text/template">
 	<div id="works-wrapper" class="row"></div>
@@ -97,6 +110,10 @@
 			</a>
 			<div class="work-desc"><b>Southern Maid Donuts</b> - 
 				<a target="_blank" href="http://smdonutsstafford.com">smdonutsstafford.com</a>
+					<br />
+				<div id="donut-desc">Website was created to showcase menu and provide information of this specific location. <a href="#" class="more-info">More Info</a>
+				</div>
+				<p id="more-donut" class="hidden">Wireframe was first drawn then discussed with others on design and interaction. This discussion is what led me to learn bootstrap to implement modern styles and design for the site and allowed to me understand more of backbone.js through hands-on experience.</p>
 			</div>
 		</div>
 		<div id="git-text">

@@ -155,8 +155,13 @@ var SiteRouter = Backbone.Router.extend({
     routes: {
     	"contact": "contact",
     	"works": "works",
-    	"about": "about",
-        "*default": "skills"
+    	"skills": "skills",
+        "*default": "about"
+    },
+    
+    about: function(){
+    	var baseView = new BaseView();
+    	var aboutView = new AboutView();
     },
 
     skills: function(){
@@ -164,14 +169,24 @@ var SiteRouter = Backbone.Router.extend({
     	var allSkillsView = new AllSkillsView();
     },
 
-    about: function(){
-    	var baseView = new BaseView();
-    	var aboutView = new AboutView();
-    },
-
     works: function(){
     	var baseView = new BaseView();
     	var worksView = new WorksView();
+
+    	$(function(){
+    		$('.more-info').click(function(e){
+    			e.preventDefault();
+
+    			if ($('#more-donut').hasClass('hidden')) {
+	    			$('.more-info').html('Less Info');
+	    			$('#more-donut').removeClass('hidden');
+	    		}
+	    		else{
+	    			$('.more-info').html('More Info');
+	    			$('#more-donut').addClass('hidden');		
+	    		}
+    		});
+    	});
     },
 
     contact: function(){

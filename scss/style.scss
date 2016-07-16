@@ -185,6 +185,29 @@ html, body{
     top: 52px;
 }
 
+/*!!!!!!!!!!!!!!!!!!! about !!!!!!!!!!!!!!!!!*/
+#self-pic{
+    text-align: center;
+}
+
+p{
+    text-indent: 50px;
+}
+
+.about-desc{
+    margin-top: 15px;
+}
+
+#about-me{
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+#thanks{
+    text-align: center;
+    margin-bottom: 15px;
+}
+
 /*!!!!!!!!!!!!!!!!! skills !!!!!!!!!!!!!!!!!*/
 .skill-section{
     text-align: center;
@@ -230,24 +253,7 @@ html, body{
         padding-bottom: 25px;
     }
 }
-/*!!!!!!!!!!!!!!!!!!! about !!!!!!!!!!!!!!!!!*/
-#self-pic{
-    text-align: center;
-}
 
-p{
-    text-indent: 50px;
-}
-
-#hobbies{
-    margin-top: 15px;
-}
-
-#about-me{
-    padding-right: 30px;
-    padding-left: 30px;
-    text-align: center;
-}
 
 /*!!!!!!!!!!!!!!!!!!! works !!!!!!!!!!!!!!!!*/
 #works-showcase{
@@ -263,7 +269,10 @@ p{
     margin-bottom: 1%;
 }
 
-/*!!!!!!!!!!!!!!!!!!!! contact !!!!!!!!!!!!!!*/
-.antispam{
-    display: none;
+#donut-desc{
+    margin-top: 10px;
+}
+
+#more-donut{
+    background-color: #f2f2f2;
 }
