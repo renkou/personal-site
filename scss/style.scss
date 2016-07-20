@@ -102,7 +102,7 @@ img {
  * YOUR CODE HERE
  */
 html, body{
-    min-height: 100vh;
+    height: 105%;
     max-width: 100%;
     overflow-x: hidden;
 }
@@ -173,7 +173,7 @@ html, body{
 /*-----------------------footer----------------------------*/
 #icon-footer{
     background-color: #444;
-    bottom: -52px;
+    bottom: -104px;
     position: absolute;
     z-index: 100;
     width: 100%;
