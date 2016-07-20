@@ -107,6 +107,11 @@ html, body{
     overflow-x: hidden;
 }
 
+.font{
+    font-family: 'Oxygen', sans-serif;
+    font-size: 1.1em;
+}
+
 /*-----------------------navigation----------------------*/
 #nav-ul-items {
     width: 100%;
@@ -174,6 +179,26 @@ html, body{
     height: 52px;
     text-align: center;
     color: white;
+    margin: 0;
+}
+
+#icon-footer a:hover{
+    color: grey;
+    text-decoration: none;
+}
+
+#icon-footer a:focus{
+    color: white;
+    text-decoration: none;
+}
+
+#linkedin{
+    margin-left: 5%;
+}
+
+.icon-link{
+    color: white;
+    text-decoration: none;
 }
 
 /*------------------------content----------------------------*/
@@ -186,8 +211,18 @@ html, body{
 }
 
 /*!!!!!!!!!!!!!!!!!!! about !!!!!!!!!!!!!!!!!*/
-#self-pic{
+#self-pic-container{
     text-align: center;
+}
+
+#self-pic{
+    border-radius: 100%;
+}
+
+#self-title{
+    text-align: center;
+    font-size: 1.5em;
+    margin-top: 15px;
 }
 
 p{
@@ -208,9 +243,34 @@ p{
     margin-bottom: 15px;
 }
 
+#about-me-text{
+    background: url(../imgs/id-icon.jpg) no-repeat left top ;
+    padding: 3px 0 15px 40px;
+    margin: 0;
+}
+
+#degree{
+    background: url(../imgs/uh-logo.jpg) no-repeat left top;
+    padding: 3px 0 15px 40px;
+    margin: 0;
+}
+
+#current{
+    background: url(../imgs/pc-console.jpg) no-repeat left top;
+    padding: 3px 0 15px 40px;
+    margin: 0;
+}
+
+#learn{
+    background: url(../imgs/lightbulb.jpg) no-repeat left top;
+    padding: 3px 0 15px 40px;
+    margin: 0;
+}
+
 /*!!!!!!!!!!!!!!!!! skills !!!!!!!!!!!!!!!!!*/
 .skill-section{
     text-align: center;
+    margin-bottom: 1%;
 }
 
 .skill-img{
@@ -219,12 +279,19 @@ p{
 
 #skill-two{
     background-color: #f2f2f2;
-    z-index: -1;
+    /*z-index: -1;*/
 }
 
 @media (min-width: 768px){
+    .skill-img{
+        margin-top: 15%;
+        margin-bottom: 20%;
+    }
+
     #skill-two{
         height: 100vh;
+        /*padding-bottom: 1%;*/
+        margin-bottom: 0;
     }
 
     .top-spacing{
@@ -249,8 +316,12 @@ p{
         padding-left: 30px;
     }
 
-    #skill-two-desc{
+    #skill-one-desc, #skill-three-desc{
         padding-bottom: 25px;
+    }
+
+    #skill-two-desc{
+        padding-bottom: 30px;
     }
 }
 

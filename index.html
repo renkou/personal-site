@@ -2,16 +2,25 @@
 <html>
 
 <head>
-    <title>Steven Lor | Front-End Web Developer Portfolio</title>
+    <title>Steven Lor | Front-End Web Developer and MIS BBA</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./dist/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
-	<div class="container">
+	<div class="container font">
 		<div id="main-div"></div>
 	</div>
-	<div id="icon-footer" class="container">Github,linkedin</div> 
+	<div id="icon-footer" class="container row font">
+		<div class="col-4-xs"></div>
+		<div class="col-4-xs">
+			<a target="_blank" href="https://github.com/renkou" class="icon-link"><img src="./imgs/github.jpg" id="github" class="icon" /> Github</a>
+
+			<a target="_blank" href="https://linkedin.com/in/steven-lor-75666193" class="icon-link"><img src="./imgs/linkedin.jpg" id="linkedin" class="icon" /> LinkedIn</a>
+		</div>
+		<div class="col-4-xs"></div>
+	</div> 
 </body>
 
 <script id="base-template" type="text/template">
@@ -53,23 +62,25 @@
 </script>
 <script id="about-template" type="text/template">
 	<div id="about-me" class="container top-spacing col-xs-12">
-		<div id="self-pic">insert circle pic of me here</div>
+		<div id="self-pic-container">
+			<img id="self-pic" src="./imgs/profile-pic.jpg" />
+		</div>
+		<div id="self-title">Front-End Web Developer | MIS BBA</div>
 		<hr width="75%" />
-		<ul id="about-ul">
+		<!-- <ul id="about-ul"> -->
 
-		<li id="about-me-text" class="about-desc">Hello there! My name is Steven Lor and I'm a front-end web developer but you already knew that from the title of this site. As you can see from this portfolio, I enjoy minimalism and and  quick response times which happens to go hand in hand with each other. I usually like to plan and draw my projects first with all the information I require in order to speed up my creation process and get feedback from others.</li>
+		<div id="about-me-text" class="about-desc">Hello there! My name is Steven Lor and I'm a front-end web developer but you already knew that from the title of this site. As you can see from this portfolio, I enjoy minimalism and and  quick response times which happens to go hand in hand with each other. I usually like to plan and draw my projects first with all the information I require in order to speed up my creation process and get feedback from others.</div>
 
-		<li id="tech" class="about-desc">Technology is amazing! More and more tech just keeps getting created and improved that there doesn't seem like there's an end in sight, which is a good thing! Thanks to technology, it has given me the opportuniy to create websites and show off to the world that I exist.</li>
+		<div id="degree" class="about-desc">I graduated from the University of Houston with a degree is MIS (Management Information Systems). While pursuing my degree I've been exposed to many areas in the business industry, including but not limited to project management, database management and international business.</div>
 
-		<li id="current" class="about-desc">Currently I've created websites and dabbled in simple mobile apps but it's fun to learn new things, especially methods that make things easier to create.</li>
+		<div id="current" class="about-desc">Currently I've created websites and dabbled in simple databases and mobile apps but it's fun to learn new things, especially methods that make things easier to create.</div>
 
-		<li id="learn" class="about-desc">I would love to continue working in the technology industry because there's just so much more to learn and not enough time! I've spent my life around technology and as a first generation American in my family, I can say that it really has made life a lot easier to deal with and help my family.</li>
+		<div id="learn" class="about-desc">I would love to continue working in the technology industry because there's just so much more to learn and not enough time! I've spent my life around technology and as a first generation American in my family, I can say that it really has made life a lot easier to deal with and help my family.</div>
 
-		<li id="games" class="about-desc">One topic that I think recieves too much negative press are video games. Video games are such a great learning tool because there's so much work put into them to create the best experience for the players. I've been exposed to them for so long that I try my best to incorporate my knowledge gained from the designs and UX of various styles and genres into the works I create.</li>
-
-		</ul>
-			<hr width="50%" />
-		<div id="thanks" class="about-desc">Thank you for visiting my website and I guarantee you that there's more to come!</div>
+		<!-- </ul> -->
+			<hr width="75%" />
+		<div id="thanks" class="about-desc">Thank you for visiting my website and I guarantee you that there's more to come! <br /> <hr width="25%" />
+		For contact information please visit my LinkedIn below.</div>
 	</div>
 </script>
 
