@@ -110,7 +110,7 @@ html, body{
 .font{
     font-family: 'Oxygen', sans-serif;
     font-size: 1.1em;
-    word-break: keep-all;
+    white-space: wrap;
 }
 
 /*-----------------------navigation----------------------*/
