@@ -109,7 +109,6 @@ html, body{
 
 .font{
     font-family: 'Oxygen', sans-serif;
-    font-size: 1.1em;
     white-space: wrap;
 }
 
@@ -129,6 +128,15 @@ html, body{
 @media (min-width: 768px){
     .top-nav-divider{
         border-right: 2px solid white;
+    }
+
+    #zero{
+        margin: 0px;
+        padding: 0px;
+    }
+
+    #top-nav{
+        padding-left: 71px;
     }
 }
 

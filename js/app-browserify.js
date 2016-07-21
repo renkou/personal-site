@@ -126,34 +126,9 @@ var WorksView = Backbone.View.extend({
     worksContainerTemplate: _.template($('#works-container-template').html())
 });
 
-//!!!!!!!!!!!!!!!!! contact view !!!!!!!!!!!!!!!!!!!!!!!!!!//
-var ContactNestedView = Backbone.View.extend({
-    el: '#contact-wrapper', 
-
-    render: function() {
-        this.$el.html(this.contactTemplate({}));
-    },
-
-    contactTemplate: _.template($('#contact-template').html())
-});
-
-var ContactView = Backbone.View.extend({
-    el: '#content-container', 
-
-    initialize: function() {
-    	this.$el.html(this.contactContainerTemplate({}));
-
-        var contactNestedView = new ContactNestedView();
-        contactNestedView.render();
-    },
-
-    contactContainerTemplate: _.template($('#contact-container-template').html())
-});
-
 //////------------router----------------//////
 var SiteRouter = Backbone.Router.extend({
     routes: {
-    	"contact": "contact",
     	"works": "works",
     	"skills": "skills",
         "*default": "about"
@@ -187,11 +162,6 @@ var SiteRouter = Backbone.Router.extend({
 	    		}
     		});
     	});
-    },
-
-    contact: function(){
-    	var baseView = new BaseView();
-    	var contactView = new ContactView();
     },
 
     initialize: function(){

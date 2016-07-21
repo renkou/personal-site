@@ -25,7 +25,7 @@
 
 <script id="base-template" type="text/template">
 	<nav id="top-nav" class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
+        <div id="zero" class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                     <span class="sr-only">Toggle navigation</span>
@@ -127,26 +127,12 @@
 				<p id="more-donut" class="hidden">Wireframe was first drawn then discussed with others on design and interaction. This discussion is what led me to learn bootstrap to implement modern styles and design for the site and allowed to me understand more of backbone.js through hands-on experience.</p>
 			</div>
 		</div>
+		<hr width="75%" />
 		<div id="git-text">
 			More projects and examples of my work can be found on my GitHub
 		</div>
 	</div>
 </script>
 
-<!-- contact template -->
-<script id="contact-container-template" type="text/template">
-	<div id="contact-wrapper" class="row"></div>
-</script>
-<script id="contact-template" type="text/template">
-	<div id="contact-showcase" class="top-spacing col-xs-12">
-		<form action="./submit.php" method="post">
-		    <div>Your name: <input type="text" name="name" /></div>
-		    <div>Your email: <input type="text" name="email" /></div>
-		    <div class="antispam">Leave this empty: <input type="text" name="url" /></div>
-		    <div><textarea name="message" rows="10" cols="50"></textarea></div>
-		    <div><input type="submit" value="Send" /></div>
-		</form>
-	</div>
-</script>
 <script type="text/javascript" src="./dist/app-browserify.js"></script>
 </html>
