@@ -16,9 +16,9 @@
     transition-duration: 0.25s;
     transition-property: opacity, transform, color, background-color, border-color, z-index, background-image;
     transition-timing-function: ease;
-    -webkit-hyphens:none;
-    -moz-hyphens:none;
-    hyphens: none;
+    -webkit-hyphens:none; /*added to remove word breaks on mobile*/
+    -moz-hyphens:none; /*added to remove word breaks on mobile*/
+    hyphens: none; /*added to remove word breaks on mobile*/
 }
 
 /**
@@ -349,7 +349,7 @@ p{
 
 #git-text{
     margin-top: 5%;
-    margin-bottom: 1%;
+    margin-bottom: 2%;
 }
 
 #donut-desc{
